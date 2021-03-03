@@ -320,10 +320,6 @@ module ROM
 
       missing_attributes = missing - map(&:name)
 
-      if missing_attributes.size > 0
-        raise MissingAttributesError.new(name, missing_attributes)
-      end
-
       block.call if block
 
       count_index
